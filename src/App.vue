@@ -19,19 +19,32 @@
 
 
 <script>
-import Header from "@/components/Header"
-import Navigation from "@/components/Navigation"
-import Footer from "@/components/Footer"
+import Header from "@/components/Header";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+
 
 export default {
   name: 'app',
+ 
   components:{
     Header,
     Navigation,
     Footer
 
-    }
+  },
+
+  mounted(){
+    var elems = document.querySelectorAll('.collapsible');
+    Window.M.Collapsible.init(elems);
   }
+
+
+}
+
+
+
+
 </script>
 
 

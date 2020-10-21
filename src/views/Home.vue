@@ -12,7 +12,7 @@ import EmploymentHistory from "@/components/EmploymentHistory"
 
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     EmploymentHistory,
    
