@@ -34,12 +34,7 @@ export default {
 
   },
 
-  mounted(){
-    var elems = document.querySelectorAll('.collapsible');
-    Window.M.Collapsible.init(elems);
-  }
-
-
+  
 }
 
 

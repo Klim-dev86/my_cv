@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <h2> I'm Home vue</h2>
+    <h2> Опыт работы</h2>
     <EmploymentHistory />
+    <h2> Образование</h2>
 
   </div>
 </template>
@@ -16,7 +17,13 @@ export default {
   components: {
     EmploymentHistory,
    
+  },
+
+  mounted(){
+    var elems = document.querySelectorAll('.collapsible');
+    Window.M.Collapsible.init(elems);
   }
+
 };
 </script>
 
