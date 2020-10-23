@@ -12,9 +12,9 @@
         <!-- <span class="badge">Подробнее...</span> -->
       </div>
       <div class="collapsible-body">
-        <ul>
-          <li>Реализация проектов систем железнодорожного измерительного оборудования.</li>
-          <li>Разработка 3D моделей, выполнение чертежей, сопровождение изготовления и ввода в эксплуатацию.</li>
+        <ul class="duties">
+          <li class="duty">Реализация проектов систем железнодорожного измерительного оборудования.</li>
+          <li class="duty">Разработка 3D моделей, выполнение чертежей, сопровождение изготовления и ввода в эксплуатацию.</li>
         </ul>
       </div>
     </li>
@@ -54,10 +54,21 @@
 
 <style lang="scss">
 
-@import '~materialize-css/dist/css/materialize.min.css';
+// @import '~materialize-css/dist/css/materialize.min.css';
+
+.collapsible-header {
+ transition: all 0.6s ease;
+
+}
+
+.collapsible-header:hover {
+  background:#b8b8b8;
+}
+
 
 .collapsible-body {
   background: #ffffff;
+  padding: 10px;
   // justify-content: space-between;
 }
 
@@ -82,10 +93,26 @@
   align-self: center;
 }
 
+.duties {
+  list-style-type: square;
+  padding: 0px;
+  margin-left: 200px;
+}
+
+.duty {
+  padding: 2px;
+  margin: 5px;
+}
+
+.profession {
+  font-size: 30px;
+}
+
 .uncollapse {
   margin-left: auto;
-  margin-right: 10em;
-  margin-right: 0;
+  margin-top: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 </style>

@@ -10,3 +10,24 @@
     </div>
   </div>
 </template>
+
+
+<script>
+// @ is an alias to /src
+
+
+export default {
+  name: 'About',
+  components: {
+    
+   
+  },
+
+  mounted(){
+    var elems = document.querySelectorAll('.carousel');
+    Window.M.Carousel.init(elems);
+   
+  }
+
+};
+</script>
