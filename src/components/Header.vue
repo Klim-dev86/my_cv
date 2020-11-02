@@ -1,20 +1,22 @@
 <template>
-    <header class='header'>
-        <div class='header-photo'>Фотография</div>
-        <div class='header-info'>Данные</div>
-        <div class='header-nav'>
-            <router-link to="/">Home</router-link> |
-            <router-link to="/about">About</router-link>
-        </div>
+    <header>
+        <img  class="my-photo" src="@/assets/my_foto.png" alt="My photo" >
+        <div class='header-info'>Россия г. Самара</div>
     </header>
 </template>
 
 
-<style lang="scss">
+<style scoped lang="scss">
 
-.header {
-  background: #3d67b6;
-  height: 20vh;
+
+.header-info {
+  font-size: 50px;
+}
+
+.my-photo {
+  // width: 100%;
+  height: 100%;
+
 }
 
 </style>

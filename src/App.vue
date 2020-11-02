@@ -1,19 +1,17 @@
 <template>
 
   <div id="app">
-    <header>
-      <Header />
-      <Navigation />
-    </header>
-
     <main>
-           
-      <router-view />
-
+      <Header class='header' />
+      <Navigation class="nav" />
+      <main>
+             
+        <router-view />
+  
+      </main>
+  
+      <Footer />
     </main>
-
-    <Footer />
-
   </div>
 </template>
 
@@ -49,19 +47,35 @@ export default {
 @import '~materialize-css/dist/css/materialize.min.css';
 
 #app {
-  background: #42b983;
-  height: 100vh;
-}
-
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  background-image: url('../src/assets/main-bgrnd.png');
+  display: flex;
+  justify-content: center;
 }
 
 main {
-    flex: 1 0 auto;
+  background: rgb(180, 180, 180);
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  // justify-content: center;
 }
+
+
+.header {
+  background: linear-gradient(135deg, orange, orange 60%, cyan);
+  height: 30vh;
+  display: flex;
+  padding: 10px;
+
+
+}
+
+
+.nav {
+  position: sticky;
+  top: 0;
+}
+
 
 // #nav {
 //   padding: 30px;

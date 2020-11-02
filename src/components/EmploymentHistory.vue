@@ -7,7 +7,10 @@
           <img class='company-icon-tgb' src="@/assets/Infotr-ico.png" alt="альтернативный текст">
           <p class='company-name'>АО НПЦ ИНФОТРАНС</p>
         </div>
-        <div class="profession">Ведущий инженер-конструктор</div>
+        <div class="proffession-wrapper">
+          <div class="profession-name">Ведущий инженер-конструктор</div>
+          <div class="profession-period">01.10.2019 г. - настоящее время</div>
+        </div>
         <div class="uncollapse">Подробнее...</div>
         <!-- <span class="badge">Подробнее...</span> -->
       </div>
@@ -104,8 +107,18 @@
   margin: 5px;
 }
 
-.profession {
+.proffession-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profession-name {
   font-size: 30px;
+}
+
+.profession-period {
+  
 }
 
 .uncollapse {
