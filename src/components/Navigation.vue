@@ -3,8 +3,9 @@
     <div class="nav-wrapper">
       <a href="#" class="name">Клименко Денис</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/">Резюме</router-link></li>
+        <li><router-link to="/about">Портфолио</router-link></li>
+        <li><router-link to="/about">Игра</router-link></li>
       </ul>
     </div>
   </nav>

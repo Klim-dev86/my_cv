@@ -57,7 +57,6 @@
 
 <style lang="scss">
 
-// @import '~materialize-css/dist/css/materialize.min.css';
 
 .collapsible-header {
  transition: all 0.6s ease;
@@ -97,7 +96,7 @@
 }
 
 .duties {
-  list-style-type: square;
+  list-style-type: disc;
   padding: 0px;
   margin-left: 200px;
 }
@@ -105,6 +104,10 @@
 .duty {
   padding: 2px;
   margin: 5px;
+}
+
+.duty::before {
+  content: "- ";
 }
 
 .proffession-wrapper {
