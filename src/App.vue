@@ -62,7 +62,7 @@ main {
 
 
 .header {
-  background: linear-gradient(135deg, orange, orange 60%, cyan);
+  background: linear-gradient(135deg, rgb(92, 92, 92), rgb(190, 190, 190) 60%, rgb(43, 43, 43));
   height: 30vh;
   display: flex;
   padding: 10px;
