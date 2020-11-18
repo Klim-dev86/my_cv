@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>I'm about vue</h1>
+    
     <div class="carousel">
       <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
       <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
@@ -31,3 +31,18 @@ export default {
 
 };
 </script>
+
+<style lang="scss">
+
+  .about {
+    height: 100vh;
+  }
+
+  .carousel {
+   
+  }
+
+  .carousel-item {
+   min-width: 800px;
+  }
+</style>
