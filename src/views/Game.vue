@@ -8,14 +8,15 @@
         <div id='diamond' v-on:click="putCoin" class='game__suit-area game__suit-area--diamond'></div>
         <div id='crown' v-on:click="putCoin" class='game__suit-area game__suit-area--crown'></div>
         <div id='anchor' v-on:click="putCoin" class='game__suit-area game__suit-area--anchor'></div>
+        <div class='game__massege-area'> Вы {{ message }} </div>
       </div>
-      <div class="game__spec">
+      <div class='game__spec'>
         <h3 class='game__name'>Корона и якорь</h3>
-        <h4>Правила игры:</h4>
+        <h4 class='game__rule-title'>Правила игры:</h4>
         <p class='game__description'>Ставьте от одного до трех дублонов на одно из шести полей на столе. Бросайте три кости. 
-          Если рисунок на кости и на игральном поле совпадет - ставка этого поля удваивается, остальные монеты проиграны.
+          Если рисунок на кости и на игральном поле совпадет - ставка этого поля удваивается, остальные монеты будут проиграны.
         </p>
-        <p>У Вас {{ funds }} дублонов</p>
+        <p>Дублонов у вас в кармане: {{ funds }}</p>
         <button v-on:click="rollDice" class="waves-effect waves-light btn">Бросить кости</button>
       </div>
     </div>
@@ -54,6 +55,7 @@ export default {
             crown: false,
             anchor: false
             },
+      message: 'Вы выиграли '
 
       
       
@@ -95,13 +97,14 @@ export default {
 
 
     rollDice: function () {
-      this.diceState = {club: false,
-                        diamond: false,
-                        peak:false,
-                        heart: false,
-                        crown: false,
-                        anchor: false
-                        };
+      this.diceState = {
+        club: false,
+        diamond: false,
+        peak:false,
+        heart: false,
+        crown: false,
+        anchor: false
+        };
 
       for (let i = 0; i < 3; i++) {
         let vinSuit = this.diceSuits[Math.floor(Math.random()*this.diceSuits.length)];
@@ -117,13 +120,14 @@ export default {
         };
       };
 
-      this.bet = {club: 0,
-            diamond: 0,
-            peak: 0,
-            heart: 0,
-            crown: 0,
-            anchor: 0
-            };
+      this.bet = {
+        club: 0,
+        diamond: 0,
+        peak: 0,
+        heart: 0,
+        crown: 0,
+        anchor: 0
+        };
 
       let areas = document.querySelectorAll('.game__suit-area');
       console.log(areas)
@@ -132,8 +136,14 @@ export default {
         area.classList.remove('game__clubs-area--one-coin');
         area.classList.remove('game__clubs-area--two-coins');
         area.classList.remove('game__clubs-area--three-coins');
-      }
-    }
+      };
+
+      let resultMassege = document.querySelector('.game__massege-area');
+      resultMassege.classList.toggle('game__massege-area--show')
+      setTimeout(() => resultMassege.classList.toggle('game__massege-area--show'), 2000)
+    },
+
+
   },
 
   mounted(){
@@ -224,10 +234,43 @@ export default {
   font-size: 55px;
 }
 
+.game__rule-title {
+  font-family: 'Pacifico', cursive;
+}
+
 .game__description {
+  text-align: justify;
   font-family: 'Pacifico', cursive;
   font-size: 25px;
   font-weight: normal;
 
+}
+
+.game__massege-area {
+  position: absolute;
+  text-align: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 400px;
+	height: 210px;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.game__massege-area--show {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.game__massedge-text {
+  top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 </style>
