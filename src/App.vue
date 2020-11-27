@@ -5,9 +5,9 @@
       <Header class='header' />
       <Navigation class="nav" />
       <main>
-             
-        <router-view />
-  
+        <transition name="fade">     
+          <router-view />
+        </transition>
       </main>
   
       <Footer />
@@ -78,17 +78,11 @@ main {
 }
 
 
-// #nav {
-//   padding: 30px;
-
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}
 
 </style>
